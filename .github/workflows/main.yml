@@ -24,7 +24,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      - name: Composer (php-actions)
+        uses: php-actions/composer@v6
+        
       - name: PHPUnit (php-actions)
         uses: php-actions/phpunit@v3
         with:
