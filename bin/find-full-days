@@ -1,0 +1,29 @@
+#!/usr/bin/php
+<?php
+
+use Polk\DayCounter;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+if (!isset($argv[1]) || !isset($argv[2])) {
+    exit('Please enter a start and end date.' . PHP_EOL);
+}
+
+try {
+    $startDate = DateTime::createFromFormat('d/m/Y', $argv[1]);
+    $endDate = DateTime::createFromFormat('d/m/Y', $argv[2]);
+} catch (\Exception $e) {
+    exit('Invalid Start or End Date provided.' . PHP_EOL);
+}
+
+$fullDays = DayCounter::getFullDayCount($startDate, $endDate);
+
+exit(
+    sprintf(
+        'There are %s full days between %s and %s' . PHP_EOL,
+        $fullDays,
+        $startDate->format('d/m/Y'),
+        $endDate->format('d/m/Y')
+    )
+);
+
