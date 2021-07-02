@@ -1,1 +1,15 @@
-<phpunit bootstrap="vendor/autoload.php" colors="true"></phpunit>
+<phpunit bootstrap="vendor/autoload.php" colors="true">
+    <testsuites>
+        <testsuite name="TheTests">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">tests</directory>
+        </whitelist>
+        <blacklist>
+            <directory suffix=".php">vendor</directory>
+        </blacklist>
+    </filter>
+</phpunit>
