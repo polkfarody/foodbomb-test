@@ -1,5 +1,9 @@
 <?php
 
+namespace Polk;
+
+use DateTimeInterface;
+
 class DayCounter {
     public static function getFullDayCount(DateTimeInterface $startDate, DateTimeInterface $endDate)
     {
@@ -12,9 +16,6 @@ class DayCounter {
             $fullDays = $totalDays - 1;
         }
 
-        return $totalDays;
+        return $fullDays;
     }
 }
-
-
-echo DayCounter::getFullDayCount(new DateTime('2020-05-05'), new DateTime('2020-06-05'));
