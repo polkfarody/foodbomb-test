@@ -1,7 +1,7 @@
 # foodbomb-test
 
 ## Requirements 
-PHP 7.3+
+PHP 7+
 
 ## Run the command
 Date format must be "d/m/Y"
