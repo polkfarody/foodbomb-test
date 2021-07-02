@@ -1,4 +1,6 @@
 # foodbomb-test
+## What it does
+Finds the number of full days between 2 dates excluding the first and last date.
 
 ## Requirements 
 PHP 7+
